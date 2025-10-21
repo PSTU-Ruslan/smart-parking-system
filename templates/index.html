@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Parking System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚗 Smart Parking System</h1>
+            <div class="stats" id="stats">
+                <div class="stat-card">
+                    <h3>Available</h3>
+                    <span id="available-spots">0</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Occupied</h3>
+                    <span id="occupied-spots">0</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Total</h3>
+                    <span id="total-spots">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="video-container">
+                <img id="video-feed" src="" alt="Live Feed">
+            </div>
+
+            <div class="parking-grid" id="parking-grid">
+                <!-- Parking spots will be generated here -->
+            </div>
+        </main>
+
+        <footer>
+            <p>Last updated: <span id="timestamp">-</span></p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
